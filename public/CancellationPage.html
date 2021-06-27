@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Railway Reserevation - Cancellation
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Home_CSS.css">
+        <link rel="shorcut icon" href="Train-logo.png">
+    </head>
+
+    <body>
+        <section>
+        <nav>
+            <a href="Home.html">
+                <img id="topleft" src="Train-logo.png" alt="Mask Logo">
+            </a>
+
+            <span></span>
+
+
+
+            <ul id="top_menu">
+                <li class="button">
+                    <a href="Home.html">Home</a>
+                </li>
+                <li class="button">
+                    <a href="BookingPage.html" >Booking Counter</a>
+                </li>
+                <li class="button">
+                    <a href="SchedulePage.html" >Schedule</a>
+                </li>
+                
+            </ul>
+            
+        </nav>
+        </section>
+
+        <div id="cancel">
+
+            <div id="PNR">
+                <script src="Cancellation.js"></script>
+                <label for="PNR" id="PNR_label">Enter PNR : </table></label>
+                <input type="text" name="PNR" id="PNR_value" placeholder="PNR Number">
+                <a href="#" id="LoginButton" onclick="cancellation()">CANCEL</a>
+            </div>
+            <p id="Cancelled"></p>
+        </div>
+    </body>
+</html>

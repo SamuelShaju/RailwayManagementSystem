@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Railway Reserevation - Booking
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Home_CSS.css">
+        <link rel="stylesheet" href="Ticket.css">
+        <link rel="shorcut icon" href="Train-logo.png">
+    </head>
+
+    <body>
+        <section>
+        <nav>
+            <a href="Home.html">
+                <img id="topleft" src="Train-logo.png" alt="Mask Logo">
+            </a>
+
+            <span></span>
+
+
+
+            <ul id="top_menu">
+                <li class="button">
+                    <a href="Home.html" >Home</a>
+                </li>
+                <li class="button">
+                    <a href="SchedulePage.html" >Schedule</a>
+                </li>
+                <li class="button">
+                    <a href="CancellationPage.html">Cancellation</a>
+                </li>
+            </ul>
+            
+        </nav>
+        </section>
+
+        <p id='head_p'>
+            Train: <span id="train_id_no"></span>
+        </p>
+        
+        <div id='main_table'>
+            <script src="Ticket.js"></script>
+            <script src="Select.js"></script>
+
+            
+
+
+            <div>
+
+                <p id='Train'>
+
+                </p>
+            </div>
+
+            <div id="getStat">
+                
+                        <label for="Start">Choose Starting Station:</label><br>
+                        <input list="Start" id="Start_input" name="Start" placeholder="Source">
+                        <datalist id="Start">
+
+                        </datalist>
+
+                        <br><br><br>
+
+                        <label for="Stop">Choose End Station:</label><br>
+                        <input list="Stop" id="Stop_input" name="Stop" placeholder="Destination">
+                        <datalist id="Stop">
+                        </datalist>
+                        <br><br><br>
+
+                        <label for="Name">Enter Name:</label><br>
+                        <input type="text" id="name_input" name="Name" placeholder="Name">
+                        <br><br><br>
+
+                        <label for="Number">Enter Number of Passengers:</label><br>
+                        <input type="text" id="number_input" name="Number" placeholder="Number of Passengers">
+                        <br><br><br>
+
+                        <label for="Privilege">Are there any privilaged Person/s?:</label><br>
+                        <input list="privs" id="Privilage_input" name="Privilage" placeholder="Privilege">
+                        <datalist id="privs">
+                            <option value="None">
+                            <option value="Military Personnel">
+                            <option value="Senior Citizen">
+                            <option value="Handicapped">
+                            <option value="Cancer Patient">
+                        </datalist>
+                        <br><br><br>
+
+                        <label for="Class">Are there any privilaged Person/s?:</label><br>
+                        <input list="Classes" id="Class_input" name="Class" placeholder="Class">
+                        <datalist id="Classes">
+                            <option value="First">
+                            <option value="Second">
+                            <option value="Third">
+                        </datalist>
+                        <br><br>
+
+
+                        <input type="submit" onclick="makeTicket()">
+
+                       
+
+            </div>
+
+            <div id="Ticket">
+
+                
+
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Railway Reserevation - Home
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Home_CSS.css">
+        <link rel="shorcut icon" href="Train-logo.png">
+        <style>
+            .Fronts {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+        <nav>
+            <a href="#">
+                <img id="topleft" src="Train-logo.png" alt="Mask Logo">
+            </a>
+
+            <span></span>
+
+
+
+            <ul id="top_menu">
+                <li class="button">
+                    <a href="BookingPage.html" >Booking Counter</a>
+                </li>
+                <li class="button">
+                    <a href="SchedulePage.html" >Schedule</a>
+                </li>
+                <li class="button">
+                    <a href="CancellationPage.html">Cancellation</a>
+                </li>
+            </ul>
+            
+        </nav>
+        </section>
+
+
+        <script>
+
+        </script>
+
+
+        <div id="Front">
+            <a onclick="changeIndex(-1)" href="#Front">&lt</a>
+            <img src="Train1.jpg" alt="Train1" class="Fronts">
+            <img src="Train2.jpg" alt="Train2" class="Fronts">
+            <img src="Train3.jpg" alt="Train3" class="Fronts">
+            <a onclick="changeIndex(1)" href="#Front">&gt</a>
+        </div>
+
+            <script>
+                var listindex = 1;
+                var images = document.getElementsByClassName("Fronts");
+                images[listindex].style.display = "block";
+
+                function changeIndex(n)
+                {
+                    
+                    images[listindex].style.display = "none";
+                    listindex += n;
+                    if(listindex>=images.length)
+                    {
+                        listindex = 0;
+                    }
+                    images[listindex].style.display = "block";
+                }
+            </script>
+    </body>
+</html>

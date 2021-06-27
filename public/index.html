@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Railway Reserevation - Home
+        </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Home_CSS.css">
+        <link rel="shorcut icon" href="Train-logo.png">
+    </head>
+
+    <body>
+        <section>
+        <nav>
+            <a href="#">
+                <img id="topleft" src="Train-logo.png" alt="Mask Logo">
+            </a>
+
+            <span></span>
+
+
+
+            <ul id="top_menu">
+                <li class="button">
+                    <a href="BookingPage.html" >Booking Counter</a>
+                </li>
+                <li class="button">
+                    <a href="SchedulePage.html" >Schedule</a>
+                </li>
+                <li class="button">
+                    <a href="CancellationPage.html">Cancellation</a>
+                </li>
+            </ul>
+
+            <span></span>
+            
+        </nav>
+        </section>
+        
+        <h1>index</h1>
+
+        <script>
+            async function sendData()
+            {
+                    const ID = document.getElementById('ID').value;
+                    const Stats = document.getElementById('Stats').value;
+
+                    const data = {ID,Stats};
+                    const options = {
+                        method: 'POST',headers:{
+                            'Content-Type':'application/json',
+                        },
+                        body: JSON.stringify(data)
+                    }
+
+                    const response = await fetch('/StopData', options);
+                    const return_data = await response.json();
+                    console.log(return_data);
+            }
+        </script>
+
+        
+
+        <input type="text" id='ID'><br>
+        <input type="text" id='Stats'><br>
+
+        <button onclick="sendData()">Submit</button>
+
+
+    </body>
+</html>

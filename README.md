@@ -8,3 +8,6 @@ To make it work you require the following dependencies:
 
 I've hosted it on glitch:
 https://deeply-humdrum-geranium.glitch.me
+
+
+Offline change

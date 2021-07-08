@@ -28,6 +28,11 @@ Login_database.loadDatabase();
 
 
 //Sending Databases asked through GET
+  
+//Sending index.html (Login Page) first
+  app.get('/', function(req, res) {
+    res.sendFile('public/Login.html', {root: __dirname })
+});
 
 //Send database to Table.js
 app.get('/Sched', (req, res) =>{
